@@ -1,0 +1,21 @@
+A. addition_str is a string with a list of numbers separated by the + sign. Write code that uses the accumulation pattern to take the sum of all of the numbers and assigns it to sum_val (an integer). (You should use the .split("+") function to split by "+" and int() to cast to an integer).
+
+
+addition_str="2+5+7+9"
+output=addition_str.split("+")
+total=0
+for i in output:
+  total=total+i
+sum_val=total
+print(sum_val)
+
+B. Write two functions, one called addit and one called mult. addit takes one number as an input and adds 5. mult takes one number as an input, and multiplies that input by whatever is returned by addit, and then returns the result
+
+def addit(x):
+    y=x+5
+    return y
+def mult(a):
+    b=a*addit(a)
+    return b
+result=mult(10)
+print(result)
